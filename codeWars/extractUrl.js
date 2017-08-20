@@ -25,3 +25,16 @@ function domainName(url) {
   
     return host;
   }
+
+// Other more clever solutions than mine:
+
+function domainName(url){
+    // Needs to be tested against subdomains.
+    return url.match(/(?:http(?:s)?:\/\/)?(?:w{3}\.)?([^\.]+)/i)[1];
+  }
+
+  // and 
+
+  function domainName(url){  
+    return url.replace(/.+\/\/|www.|\..+/g, '')
+  }
