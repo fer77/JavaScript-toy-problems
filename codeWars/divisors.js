@@ -4,7 +4,13 @@ Create a function named divisors that takes an integer and returns an array with
 */
 
 function divisors(integer) {
-  var divisors = []
-  for (var i = 2; i <= Math.floor(integer / 2); ++i) if (integer % i == 0) divisors.push(i);
-  return divisors.length ? divisors : integer + ' is prime';
+  var divArr = [];
+  
+  for (var i = 2; i <= Math.floor(integer/2); i++) {
+    if (integer % i == 0) {
+      divArr.push(i);
+    }
+  }
+  
+  return divArr.length ? divArr : integer + ' is prime';
 };
