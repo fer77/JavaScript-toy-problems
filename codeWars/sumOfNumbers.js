@@ -10,19 +10,31 @@
 
 // output: 0+1+2+3+4+5+6 = 21
 
-var sequenceSum = function(num) {
-	if (num < 0) {
-		return num + '<0';
-    } else if (num === 0) { 
-		return num + '=0'
-    }
-    var seq = Array.apply(null, {length: num + 1}).map(Function.call, Number);
-    // console.log(seq);
+var SequenceSum = (function() {
+  function SequenceSum() {}
 
-    var sum = seq.reduce(function(a, b) { return a + b; }, 0);
-    // console.log(sum);
+  SequenceSum.showSequence = function(count) {
+    var sum = 0,
+        str = "";
     
-    return seq.join(' + ') + ' = ' + sum;
-};
+    if (count < 0) {
+      return count + "<0";
+    } else if (count == 0) {
+      return "0=0";
+    } else {
+      for (var i = 0; i < count; i++) {
+        sum += i;
+        str += i + "+";
+      };
+      
+      sum += count;
+      str += i + " = " + sum;
+      return str;
+    }
+  };
+
+  return SequenceSum;
+
+})();
 
 sequenceSum(6);// "1 + 2 + 3 + 4 + 5 + 6 = 21"
