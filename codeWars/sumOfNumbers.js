@@ -36,5 +36,3 @@ var SequenceSum = (function() {
   return SequenceSum;
 
 })();
-
-sequenceSum(6);// "1 + 2 + 3 + 4 + 5 + 6 = 21"
