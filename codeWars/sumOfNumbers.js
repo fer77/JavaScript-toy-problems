@@ -13,21 +13,21 @@
 var SequenceSum = (function() {
   function SequenceSum() {}
 
-  SequenceSum.showSequence = function(count) {
+  SequenceSum.showSequence = function(num) {
     var sum = 0,
         str = "";
     
-    if (count < 0) {
-      return count + "<0";
-    } else if (count == 0) {
+    if (num < 0) {
+      return num + "<0";
+    } else if (num == 0) {
       return "0=0";
     } else {
-      for (var i = 0; i < count; i++) {
+      for (var i = 0; i <= num; i++) {
         sum += i;
         str += i + "+";
       };
       
-      sum += count;
+      // sum += num;
       str += i + " = " + sum;
       return str;
     }
