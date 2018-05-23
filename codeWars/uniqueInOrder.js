@@ -2,17 +2,19 @@
 
 var uniqueInOrder=function(iterable){
   //your code here - remember iterable can be a string or an array
-  var arr = [];
-  var elem;
-  
+  var list = [],
+      listItem;
+      
   for (var i = 0; i < iterable.length; i++) {
-    if (iterable[i] !== elem) {
-      arr.push(elem = iterable[i]);
-    } else {
+    
+    if (iterable[i] != listItem) {
+      list.push(listItem = iterable[i]);
+    }
+    else {
       iterable[i].delete;
     }
   }
-  return arr;
+  return list;
 }
 
 uniqueInOrder('AAAABBBCCDAABBB');
